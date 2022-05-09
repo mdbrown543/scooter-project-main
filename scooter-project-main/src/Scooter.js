@@ -70,6 +70,7 @@ class Scooter extends ScooterApp{
     }else if(distance > this.range){
       console.log("Destination exceeds current range. Please recharge scooter.")
     }else{
+      this.isDocked = false
       this.wallet -= price
       this.charge = this.charge - (distance*5)
       this.range = Math.round(this.charge/5)
